@@ -1,0 +1,61 @@
+Post http://localhost:5007/api/DynamicTable/insert/Table1
+Content-Type: application/json
+
+{
+  "Name": "Name1"
+}
+###
+Post http://localhost:5007/api/DynamicTable/insert/Table1
+Content-Type: application/json
+
+{
+  "Name": "Name2"
+}
+
+
+###
+POST http://localhost:5007/api/DynamicTable/create
+POST http://localhost:5007/api/DynamicTable/addColumn
+POST http://localhost:5007/api/DynamicTable/insert/YourTableName
+###
+GET http://localhost:5007/api/DynamicTable/get/task
+
+###
+PUT http://localhost:5007/api/DynamicTable/update/Task/1
+Content-Type: application/json
+
+{        
+  "name": "Task One",
+  "description": "Description of Task One"
+}
+
+###
+DELETE http://localhost:5007/api/DynamicTable/delete/Task/6
+
+###
+POST http://localhost:5007/api/User/addUser
+Content-Type: application/json
+
+{        
+  "Username": "user1",
+  "Password": "password1",
+  "Content": "[\"task\"]"
+}
+
+###
+POST http://localhost:5007/api/User/Login
+Content-Type: application/json
+
+{        
+  "Username": "user3",
+  "Password": "password3"
+}
+###
+PUT http://localhost:5007/api/User/updateUserContent
+Content-Type: application/json
+
+{
+  "userId": 5,
+  "content": "[\"project\"]"
+}
+
